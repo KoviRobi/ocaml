@@ -13,28 +13,32 @@ are also listed as references.
 \hline
 Operator class                                       & Associativity \\
 \hline
-$!\ldots$ $\tilde{}\ldots$                                    &  --   \\
-$.\cdots()$ $.\cdots[]$ $.\cdots$\textbraceleft\textbraceright&  --   \\
+$!\ldots$ $\tilde{}\ldots$                                    &  -- (prefix)   \\
+$.\cdots()$ $.\cdots[]$ $.\cdots$\textbraceleft\textbraceright&  -- (link indexops)   \\
 \#\ldots                                                      & left  \\
 function application                                          & left  \\
-- -.                                                          &  --   \\
+- -.                                                          &  -- (prefix)   \\
 $**\ldots$ lsl lsr asr                                        & right \\
 $*\ldots$ /\ldots \%\ldots  mod land lor lxor                 & left  \\
 +\ldots -\ldots                                               & left  \\
-::                                                            & right \\
+::                                                            & right (note infix -) \\
 @\ldots \textasciicircum\ldots                                & right \\
 =\ldots <\ldots >\ldots |\ldots \&\ldots \$\ldots !=          & left  \\
 \& \&\&                                                       & right \\
 or ||                                                         & right \\
-,                                                             &  --   \\
+,                                                             &  -- (syntax/tuple)   \\
 <- :=                                                         & right \\
-if                                                            &  --   \\
+if                                                            &  -- (syntax)   \\
 ;                                                             & right \\
+let let\ldots match fun function try                          &  -- (syntax/link bindingops) \\
 \hline
 \end{tabular}
+
+See also \ref{ss:precedence-and-associativity}.
 %}
 
 {%html:
+TODO: Update this also
 <table align=center border=1>
 <thead><tr><th>Operator class</th><th>Associativity </th></tr></thead>
 <tr><td><code class=code>!&#X2026 ~&#X2026</code>     </td><td>&#X2013</td></tr>
@@ -61,6 +65,7 @@ if                                                            &  --   \\
 %}
 
 {%man:
+TODO: Update this also
 .IP Associativity
 Operator class
 .IP -
